@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode2021",
+  "version": "1.0.0",
+  "description": "This repository contains solutions for puzzles for Advent Of Code 2021 event",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CzerwinskiMarcin/AdventOfCode2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CzerwinskiMarcin/AdventOfCode2021/issues"
+  },
+  "homepage": "https://github.com/CzerwinskiMarcin/AdventOfCode2021#readme",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
+}

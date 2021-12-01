@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "removeComments": true
+  },
+  "include": [
+    "puzzles/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
