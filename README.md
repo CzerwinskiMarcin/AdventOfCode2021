@@ -6,7 +6,7 @@ ___
 Simple - to force upon myself regularity in solving puzzles from the events and to keep the code somewhat readable.
 
 
-_If you have some audience your will put more work in your code_.
+_If you have some audience you will put more work in your code_.
 
 ---
 #### First day - Ascending into the darkness
