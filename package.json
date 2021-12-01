@@ -4,6 +4,7 @@
   "description": "This repository contains solutions for puzzles for Advent Of Code 2021 event",
   "main": "index.js",
   "scripts": {
+    "nodemon": "nodemon",
     "tsc": "tsc --project tsconfig.json"
   },
   "repository": {
@@ -21,6 +22,8 @@
     "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.11"
+    "@types/node": "^16.11.11",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "watch": ["puzzles"],
+  "ext": "ts",
+  "exec": "npm run tsc"
+}
