@@ -1,7 +1,7 @@
-import { FileUtils } from "../utils/file-utils";
-import { ValuesUtils } from "../utils/values-utils";
+import { FileUtils } from "../shared/utils/file-utils";
+import { ValuesUtils } from "../shared/utils/values-utils";
 import * as path from 'path';
-import { ArrayUtils } from "../utils/array-utils";
+import { ArrayUtils } from "../shared/utils/array-utils";
 
 enum ElevationDirection {
     Ascending,
