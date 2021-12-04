@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const file_utils_1 = require("../shared/utils/file-utils");
 const values_utils_1 = require("../shared/utils/values-utils");
-const path = require("path");
 const array_utils_1 = require("../shared/utils/array-utils");
 var ElevationDirection;
 (function (ElevationDirection) {
@@ -11,15 +10,20 @@ var ElevationDirection;
     ElevationDirection[ElevationDirection["Even"] = 2] = "Even";
     ElevationDirection[ElevationDirection["Omit"] = 3] = "Omit";
 })(ElevationDirection || (ElevationDirection = {}));
-function main() {
-    const filePath = path.join(__dirname, 'puzzle.txt');
-    const rawDepths = file_utils_1.FileUtils.readFileToArray(filePath);
+function main(sourcePath) {
+    const rawDepths = file_utils_1.FileUtils.readFileToArray(sourcePath);
     let depths = values_utils_1.ValuesUtils.convertToNumber(rawDepths);
+    const convertElevationAlpha = convertElevation(depths);
+    const ascendingElevationsAlpha = countElevationDirection(convertElevationAlpha, ElevationDirection.Ascending);
     depths = processDepths(depths);
-    const convertedElevation = convertElevation(depths);
-    const ascendingElevations = countElevationDirection(convertedElevation, ElevationDirection.Ascending);
-    console.log(`Result: ${ascendingElevations}`);
+    const convertedElevationBeta = convertElevation(depths);
+    const ascendingElevationsBeta = countElevationDirection(convertedElevationBeta, ElevationDirection.Ascending);
+    return {
+        alphaResult: ascendingElevationsAlpha,
+        betaResult: ascendingElevationsBeta
+    };
 }
+exports.default = main;
 function processDepths(depths) {
     return makeSumSlides(depths, 3);
 }
@@ -52,5 +56,4 @@ function countElevationDirection(elevations, direction) {
     return elevations
         .reduce((acc, curr) => curr === direction ? ++acc : acc, 0);
 }
-main();
 //# sourceMappingURL=index.js.map

@@ -10,17 +10,25 @@ enum ElevationDirection {
     Omit
 }
 
-function main(): void {
+export default function main(sourcePath: string): {alphaResult: number, betaResult: number} {
     // TODO: Needs to parametrize this by script
-    const filePath = path.join(__dirname, 'puzzle.txt');
-    const rawDepths: Array<string> = FileUtils.readFileToArray(filePath);
+    const rawDepths: Array<string> = FileUtils.readFileToArray(sourcePath);
     let depths: Array<number> = ValuesUtils.convertToNumber<string>(rawDepths) as Array<number>;
+
+    // First puzzles part
+    const convertElevationAlpha = convertElevation(depths);
+    const ascendingElevationsAlpha = countElevationDirection(convertElevationAlpha, ElevationDirection.Ascending);
+
+
     // Processing depths for the second part of task
     depths = processDepths(depths);
-    const convertedElevation = convertElevation(depths);
-    const ascendingElevations = countElevationDirection(convertedElevation, ElevationDirection.Ascending);
+    const convertedElevationBeta = convertElevation(depths);
+    const ascendingElevationsBeta = countElevationDirection(convertedElevationBeta, ElevationDirection.Ascending);
 
-    console.log(`Result: ${ascendingElevations}`);
+    return {
+        alphaResult: ascendingElevationsAlpha,
+        betaResult: ascendingElevationsBeta
+    }
 }
 
 function processDepths(depths: Array<number>): Array<number> {
@@ -61,5 +69,3 @@ function countElevationDirection(elevations: Array<ElevationDirection>, directio
     return elevations
         .reduce((acc: number, curr: ElevationDirection) => curr === direction ? ++acc : acc, 0);
 }
-
-main();
