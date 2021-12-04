@@ -1,11 +1,15 @@
 import { FileUtils, ValuesUtils } from "../shared/utils";
 import { BingoSubsystem } from "./models/bingo-subsystem.model";
 import { BingoBoard } from "./models/bingo-board.model";
+import { deflateRaw } from "zlib";
 
-export default function main(sourcePath: string) {
+export default function main(sourcePath: string): any {
     const bingoSubsystem: BingoSubsystem = initializeBingoSubsystem(sourcePath);
-    const winningBoard: BingoBoard = conductGame(bingoSubsystem);
-    calculateWinningScore(bingoSubsystem, winningBoard);
+    // For first part of puzzle
+    // const winningBoard: BingoBoard = conductGame(bingoSubsystem);
+    // For second part of puzzle
+     const winningBoard: BingoBoard = findLastWinningBoard(bingoSubsystem);
+    return calculateWinningScore(bingoSubsystem, winningBoard);
 }
 
 function initializeBingoSubsystem(sourcePath: string): BingoSubsystem {
@@ -28,8 +32,7 @@ function conductGame(bingoSubsystem: BingoSubsystem): BingoBoard {
     let winningBoard: BingoBoard;
 
     do {
-        drawnValue = bingoSubsystem.draw();
-        bingoSubsystem.markFields(drawnValue);
+        drawnValue = bingoSubsystem.doTurn();
         winningBoard = bingoSubsystem.findWinningBoard();
 
     } while(drawnValue !== null && !winningBoard)
@@ -37,11 +40,19 @@ function conductGame(bingoSubsystem: BingoSubsystem): BingoBoard {
     return winningBoard;
 }
 
+function findLastWinningBoard(bingoSubsystem: BingoSubsystem): BingoBoard {
+    let winningBoard: BingoBoard;
+    while (bingoSubsystem.getBoardsNumber()) {
+        bingoSubsystem.doTurn();
+        winningBoard = bingoSubsystem.findWinningBoard()
+    }
+
+    return winningBoard;
+}
+
 function calculateWinningScore(bingoSubsystem: BingoSubsystem, winningBoard: BingoBoard): number {
     const lastDrawnNumber: number = bingoSubsystem.getLastDrawnNumber();
     const unmarkedFieldsSum: number = winningBoard.sumUnmarkedNumbers();
-
-    console.log(`Last: ${lastDrawnNumber}, unmarked sum: ${unmarkedFieldsSum} result: ${lastDrawnNumber * unmarkedFieldsSum}`);
 
     return lastDrawnNumber * unmarkedFieldsSum;
 }

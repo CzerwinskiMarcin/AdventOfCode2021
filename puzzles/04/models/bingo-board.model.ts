@@ -2,7 +2,7 @@ import { BoardConfig } from "../interfaces/board-data.interface";
 
 interface Field {
     value: number,
-    marked: boolean
+    marked: boolean,
 }
 
 export class BingoBoard {

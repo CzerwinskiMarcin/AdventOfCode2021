@@ -24,7 +24,8 @@ const targetPath = path.join(__dirname, formattedDay);
 
 import(targetPath)
     .then(({default: fn}: {default: Function}) => {
-        fn(path.join(__dirname, formattedDay, 'data', `${source}.txt`));
+        const result = fn(path.join(__dirname, formattedDay, 'data', `${source}.txt`));
+        console.log('Result: ', result);
     })
     .catch(err => {
         console.error(err);

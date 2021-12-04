@@ -7,11 +7,13 @@ export class BingoSubsystem {
     private drawSystemData: {
         queued: Array<number>,
         current: number,
-        drawn: Array<number>
+        drawn: Array<number>,
+        winningBoards: Array<BingoBoard>
     } = {
         queued: [],
         current: null,
-        drawn: []
+        drawn: [],
+        winningBoards: []
     }
 
     initializeDrawOrder(drawOrder: Array<number>): void {
@@ -78,8 +80,31 @@ export class BingoSubsystem {
         });
     }
 
+    doTurn(): number {
+        this.draw();
+        this.markFields(this.drawSystemData.current);
+        return this.drawSystemData.current;
+    }
+
     findWinningBoard(): BingoBoard {
-        return this.boards.find(board => board.isWinning());
+        const winningBoard = this.boards.find(board => board.isWinning());
+        if (winningBoard) {
+            this.drawSystemData.winningBoards.push(winningBoard);
+        }
+        this.filterOutWinningBoard();
+        return winningBoard;
+    }
+
+    filterOutWinningBoard(): void {
+        this.boards = this.boards.filter(board => !board.isWinning());
+    }
+
+    getBoardsNumber(): number {
+        return this.boards.length;
+    }
+
+    getBoards(): Array<BingoBoard> {
+        return [...this.boards];
     }
 
 }
