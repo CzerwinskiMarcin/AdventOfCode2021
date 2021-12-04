@@ -32,3 +32,18 @@ this is good approach. If I was to go with this, I should keep some convention i
 Needs to do some more thoughts about this.
 
 ---
+
+#### Third day - Submarine health issues
+##### _03.12.2021_
+
+Third day - for now the most complex puzzle. Spend _WAY_ to much time on this. At some point I've debugged code for 1 hours just to find 
+that there is comparison with lower and equal instead of just lower.
+
+I've added some parametrization with _*yargs*_. So now I can run any code frm one point. I need just make previous 2 days.
+
+Alsa I've gone with this puzzle towards specific approach. As I'm front-end developer I do not have much possibility to work with bits
+therefore I wanted to make whole solution with bit calculation approach. It _*WAS*_ hard but I'm glad that I have done this.
+
+I'm far from being proud for my code but I need to do this faster, because I'm being late - there is already fourth puzzle.
+
+---
