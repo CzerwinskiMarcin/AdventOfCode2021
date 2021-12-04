@@ -34,9 +34,9 @@ Needs to do some more thoughts about this.
 ---
 
 #### Third day - Submarine health issues
-##### _03.12.2021_
+##### _03-04.12.2021_
 
-Third day - for now the most complex puzzle. Spend _WAY_ to much time on this. At some point I've debugged code for 1 hours just to find 
+Third and fourth day - for now the most complex puzzle. Spend _WAY_ to much time on this. At some point I've debugged code for 1 hours just to find 
 that there is comparison with lower and equal instead of just lower.
 
 I've added some parametrization with _*yargs*_. So now I can run any code frm one point. I need just make previous 2 days.
@@ -45,5 +45,19 @@ Alsa I've gone with this puzzle towards specific approach. As I'm front-end deve
 therefore I wanted to make whole solution with bit calculation approach. It _*WAS*_ hard but I'm glad that I have done this.
 
 I'm far from being proud for my code but I need to do this faster, because I'm being late - there is already fourth puzzle.
+
+---
+
+#### Fourth day - Squid Game (not THAT Squid Game)
+##### _04.12.2021_
+
+This day has been long. Giant squid was easier for me this time. The code if far from being perfect, and has many flaws
+(_psss. If there is more than one winning board per turn this will crush, don't tell anyone~~~~~~_) but it works. I'm currently out of home
+and cannot solve them with comfortable environment. But hey, sometimes this happens. 
+
+Thankfully I've fixed and adjusted codes from previous days to match the parametrization so today is double win
+(_triple if you count finishing 3rd day's puzzle today_).
+
+Next one tomorrow ;)
 
 ---
