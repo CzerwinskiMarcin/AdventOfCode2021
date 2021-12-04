@@ -1,12 +1,10 @@
-import { FileUtils } from "../shared/utils/file-utils";
+import { FileUtils } from "../shared/utils";
 import { Command } from "./types";
 import CommandConverter from "./utils/command-converter.util";
 import Submarine from "./models/submarine.model";
-const path = require('path');
 
-function main(): void {
-   const filePath: string = path.join(__dirname, 'data', 'puzzle.txt');
-   const fileData: Array<string> = FileUtils.readFileToArray(filePath);
+export default function main(sourcePath: string): {alphaResult: number, betaResult: number} {
+   const fileData: Array<string> = FileUtils.readFileToArray(sourcePath);
    const commands: Array<Command> = CommandConverter.convertToCommands(fileData);
    const submarine = new Submarine();
 
@@ -22,6 +20,9 @@ function main(): void {
    const secondCoordinates: [number, number] = submarine.getPosition().getCoordinates();
    const secondMultiplication: number = secondCoordinates.reduce((acc: number, curr: number) => acc * curr, 1);
    console.log(`secondCoordinates: ${secondCoordinates.join(', ')} second multiplication: ${secondMultiplication}`);
-}
 
-main();
+   return {
+      alphaResult: multiplication,
+      betaResult: secondMultiplication
+   }
+}
