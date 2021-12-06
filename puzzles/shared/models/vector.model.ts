@@ -6,10 +6,12 @@ export class Vector {
         this.y = y;
     }
 
-    add(vector: Vector): void {
+    add(vector: Vector): this {
         const {x, y} = vector;
         this.x += x;
         this.y += y;
+
+        return this;
     }
 
     getX(): number {
@@ -22,6 +24,13 @@ export class Vector {
 
     getCoordinates(): [number, number] {
         return [this.getX(), this.getY()];
+    }
+
+    getDifference(vector: Vector): Vector {
+        const xDiff = this.getX() - vector.getX();
+        const yDiff = this.getY() - vector.getY();
+
+        return new Vector(xDiff, yDiff);
     }
 
     copy(): Vector {

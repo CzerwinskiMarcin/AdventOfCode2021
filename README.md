@@ -61,3 +61,12 @@ Thankfully I've fixed and adjusted codes from previous days to match the paramet
 Next one tomorrow ;)
 
 ---
+
+### Fifth day - Drawing map of the ocean floor
+#### _05.12.2012_
+
+Puzzle where you must draw map - I've solved one or two in the past so this was something similar and one of the easiest for now.
+I was able to implement second part of the puzzle even before the context was revealed - going with some approaches 
+makes you job easier in the future. I've done this also on being away from home. I'm waiting for next puzzle.
+
+---
