@@ -70,3 +70,19 @@ I was able to implement second part of the puzzle even before the context was re
 makes you job easier in the future. I've done this also on being away from home. I'm waiting for next puzzle.
 
 ---
+
+### Sixth day - Calculation Laternfishnation
+#### _06-07.12.2021_
+
+Laternfish - I will dream about you for a long time in the future. 
+
+This task is close to my heart - I have bachelor degree in Biotechnology therefore I have some interest in nature ;) 
+While this task was easy at first glance it soon happend to show that my calculation complexity is far from good at first part approach.
+Thanks to second part I've also noticed that I spend to little time on understanding the topic and all steps of puzzle. 
+Need to improve in this field. 
+
+I do not know if I can make next (7th) puzzle today. If not, I will catch up at weekend. 
+
+Bye :)
+
+---
