@@ -59,4 +59,8 @@ export class BitUtils {
     static negateBits(value: number, mask: number): number {
         return ~value & mask;
     }
+
+    static convertToBitWithPadding(value: number, padding: number): string {
+        return value.toString(2).padStart(padding, '0');
+    }
 }
