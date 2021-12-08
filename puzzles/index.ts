@@ -1,3 +1,5 @@
+import { start } from "repl";
+
 const yargs = require('yargs/yargs');
 const {hideBin} = require('yargs/helpers');
 const path = require('path');
@@ -22,9 +24,11 @@ const {day, source} = argv;
 const formattedDay = `${day}`.padStart(2, '0');
 const targetPath = path.join(__dirname, formattedDay);
 
+const startTime = Date.now();
 import(targetPath)
     .then(({default: fn}: {default: Function}) => {
         const result = fn(path.join(__dirname, formattedDay, 'data', `${source}.txt`));
+        console.log(`Puzzle solution run time: ${Date.now() - startTime} ms`);
         console.log('Result: ', result);
     })
     .catch(err => {
