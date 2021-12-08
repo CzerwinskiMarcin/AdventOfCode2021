@@ -86,3 +86,15 @@ I do not know if I can make next (7th) puzzle today. If not, I will catch up at 
 Bye :)
 
 ---
+
+### Seventh day - Combustion problem
+#### _07-08.12.2021_
+
+Crabs submarines are here to save us but not without our help. I think that this puzzle is one of easier one from this year.
+I didn't have much problem with the puzzle in terms of algorithm but in one point I've used wrong value (length of positions instead of 
+max position).
+
+I need some tool to debug (of course by printing values in fancy ways) and a mechanism to turning it on/off. For now I'm using simple 
+```console.log()``` :D. 
+
+---
