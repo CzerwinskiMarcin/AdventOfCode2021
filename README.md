@@ -98,3 +98,11 @@ I need some tool to debug (of course by printing values in fancy ways) and a mec
 ```console.log()``` :D. 
 
 ---
+
+### Eighth day - North Pole - we have a problem with display
+#### _08-09.12.2021_
+
+This one will be short - Firstly I've approached without thought and overcomplicated this. Only at the end of the 08 I've found easier
+solution for this, therefore I've done it now
+
+Thanks ;)
