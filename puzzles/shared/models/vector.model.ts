@@ -26,6 +26,10 @@ export class Vector {
         return [this.getX(), this.getY()];
     }
 
+    isInPoint(x: number, y: number): boolean {
+        return this.getX() === x && this.getY() === y;
+    }
+
     getDifference(vector: Vector): Vector {
         const xDiff = this.getX() - vector.getX();
         const yDiff = this.getY() - vector.getY();

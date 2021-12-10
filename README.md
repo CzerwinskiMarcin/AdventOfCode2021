@@ -106,3 +106,17 @@ This one will be short - Firstly I've approached without thought and overcomplic
 solution for this, therefore I've done it now
 
 Thanks ;)
+
+### Ninth day - '_Lava is cool_'
+#### _09-10.12.2021_
+
+Wrong assumptions really can be painful. If, for example, one will make assumption that the slide can be only by one level,
+then you have, like, 4 hours of debugging and searching your mistake. 
+
+Regardless this puzzle was awesome ;) It was interesting and quite relaxing (except wrong assumption) ;)
+
+P.S. I've also made some function with printing map with marked basin region in yellow! It was first time for me using 
+colors in node console.log :D
+
+---
+
