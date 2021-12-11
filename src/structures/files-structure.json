@@ -1,0 +1,33 @@
+[
+  {
+    "name": "",
+    "parent": null,
+    "type": "dir"
+  },
+  {
+    "name": "data",
+    "parent": "",
+    "type": "dir"
+  },
+  {
+    "name": "models",
+    "parent": "",
+    "type": "dir"
+  },
+  {
+    "name": "index.ts",
+    "template": "index.ts",
+    "parent": "",
+    "type": "file"
+  },
+  {
+    "name": "example.txt",
+    "parent": "data",
+    "type": "file"
+  },
+  {
+    "name": "puzzle.txt",
+    "parent": "data",
+    "type": "file"
+  }
+]

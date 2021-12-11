@@ -1,36 +1,67 @@
-import { start } from "repl";
+import { prepareScriptStructure } from "../src";
 
-const yargs = require('yargs/yargs');
-const {hideBin} = require('yargs/helpers');
+const yargs = require('yargs');
 const path = require('path');
 
-const argv = yargs(hideBin(process.argv))
-    .option('d', {
-        alias: 'day',
-        demandOption: true,
-        describe: 'The puzzle from the day',
-        type: 'number'
-    })
-    .option('s', {
-        alias: 'source',
-        default: 'example',
-        describe: 'Source of the data for the puzzle',
-        choices: ['example', 'puzzle']
-    })
-    .argv;
+type puzzleDataSource = 'example' | 'puzzle';
+
+yargs.command({
+    aliases: 'i',
+    command: 'initialize',
+    describe: 'Initialize folder structure for new day',
+    builder: {
+        day: {
+            alias: 'd',
+            describe: 'Day of the puzzle to initialize script structure',
+            demandOption: true,
+            type: 'number'
+        }
+    },
+    handler({day}: { day: number }) {
+        prepareScriptStructure(day);
+    }
+});
+
+yargs.command({
+    aliases: 'r',
+    command: 'run',
+    describe: 'Run puzzle',
+    builder: {
+        day: {
+            alias: 'd',
+            describe: 'Day of the puzzle to initialize script structure',
+            demandOption: true,
+            type: 'number'
+        },
+        source: {
+            alias: 's',
+            default: 'example',
+            describe: 'Source of the data for the puzzle',
+            choices: ['example', 'puzzle']
+        }
+    },
+    handler({day, source}: { day: number, source: puzzleDataSource }) {
+        runPuzzle(day, source);
+    }
+})
+
+yargs.parse();
 
 
-const {day, source} = argv;
-const formattedDay = `${day}`.padStart(2, '0');
-const targetPath = path.join(__dirname, formattedDay);
+function runPuzzle(day: number, source: puzzleDataSource): void {
+    const formattedDay = `${day}`.padStart(2, '0');
+    const targetPath = path.join(__dirname, formattedDay);
 
-const startTime = Date.now();
-import(targetPath)
-    .then(({default: fn}: {default: Function}) => {
-        const result = fn(path.join(__dirname, formattedDay, 'data', `${source}.txt`));
-        console.log(`Puzzle solution run time: ${Date.now() - startTime} ms`);
-        console.log('Result: ', result);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+    const startTime = Date.now();
+    import(targetPath)
+        .then(({default: fn}: { default: Function }) => {
+            const result = fn(path.join(__dirname, formattedDay, 'data', `${source}.txt`));
+            console.log(`Puzzle solution run time: ${Date.now() - startTime} ms`);
+            console.log('Result: ', result);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+}
+

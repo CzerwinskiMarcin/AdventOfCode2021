@@ -5,10 +5,12 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "removeComments": true
+    "removeComments": true,
+    "resolveJsonModule": true
   },
   "include": [
-    "puzzles/**/*"
+    "puzzles/**/*",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
