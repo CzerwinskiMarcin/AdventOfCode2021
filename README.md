@@ -121,3 +121,19 @@ read more about this.
 Thanks for the task. Today will be new one! 
 
 ---
+
+### 11th day - Octo flashes
+#### _11-12.12.2021_
+
+I've found one of the cutest animals on the Earth! They are perfect, little and cute. Ah....
+
+Returning to the puzzle - sow second time map-like puzzle therefore I've created _*EnhancedMap*_ model for storing the information 
+in map-like manner. As for the puzzle, first impression tells you (me in this case) that hard times are in the future. 
+But it is quite simple puzzle. 
+
+Also I've created script for creating structure for the puzzle for given day xD My laziness is limitless. Of course it has
+many flows but I need if for like 15 day now.
+
+Thanks for sharing this cute Dumbo Octopus AoC team!
+
+===
