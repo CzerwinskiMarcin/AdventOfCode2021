@@ -30,6 +30,18 @@ export class Vector {
         return this.getX() === x && this.getY() === y;
     }
 
+    isTheSamePosition(target: Vector): boolean {
+        return this.y === target.getY() && this.x === target.getX();
+    }
+
+    isVerticallyAligned(target: Vector): boolean {
+        return this.y === target.getY();
+    }
+
+    isHorizontallyAligned(target: Vector): boolean {
+        return this.x === target.getX();
+    }
+
     getDifference(vector: Vector): Vector {
         const xDiff = this.getX() - vector.getX();
         const yDiff = this.getY() - vector.getY();
