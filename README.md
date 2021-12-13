@@ -137,3 +137,18 @@ many flows but I need if for like 15 day now.
 Thanks for sharing this cute Dumbo Octopus AoC team!
 
 ===
+
+### 12th day - _Leave all hope ye who enter here_
+#### _11-12.12.2021_
+
+Honestly I was not hoping to finish this puzzle at all. I was thinking about abandoning it and move on to today puzzle. 
+But thanks to my stubbornness I was able to finish it with *_only_* one day of delay :) I do not know what what the case of 
+this slip in schedule - nothing has been gone right starting from understanding the puzzle questions, including to complex 
+implementation (two first tries) and making silly mistakes. Maybe it some kind of tiredness or too much chores to do before 
+Christmas? 
+
+*BUT* it is not important now because 🎺 I did it 🎺 :D
+
+Now is 23:30 (11:30 PM) time to go to today puzzle ;)
+
+---
