@@ -136,7 +136,7 @@ many flows but I need if for like 15 day now.
 
 Thanks for sharing this cute Dumbo Octopus AoC team!
 
-===
+---
 
 ### 12th day - _Leave all hope ye who enter here_
 #### _11-12.12.2021_
@@ -150,5 +150,15 @@ Christmas?
 *BUT* it is not important now because 🎺 I did it 🎺 :D
 
 Now is 23:30 (11:30 PM) time to go to today puzzle ;)
+
+---
+
+### 13th day  - Origami folding
+#### _12.12.2021_
+
+This puzzle went quicker than I thought it would be. I'm overcomplicated code and first run took about 8s, but after reducing
+some unnecessary code now it takes 30ms - quite big different. 
+
+I'm hopping to catch up new puzzle :) Wish me luck!
 
 ---
