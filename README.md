@@ -154,11 +154,20 @@ Now is 23:30 (11:30 PM) time to go to today puzzle ;)
 ---
 
 ### 13th day  - Origami folding
-#### _12.12.2021_
+#### _13.12.2021_
 
 This puzzle went quicker than I thought it would be. I'm overcomplicated code and first run took about 8s, but after reducing
 some unnecessary code now it takes 30ms - quite big different. 
 
 I'm hopping to catch up new puzzle :) Wish me luck!
+
+---
+
+### 14th day - Polymerisation Optimalisation
+#### _14.12.2021_
+
+This puzzle was a headache to me. I've focused more on the polimerisation chain result, less on the puzzles question.
+After this I spent loooong time spinning around and trying to make things better, and done nothing. After conversation
+with my steps brother I've cleared my head and made another approach. And I've succeeded. That all for today. Thanks!
 
 ---
